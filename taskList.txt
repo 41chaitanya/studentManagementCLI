@@ -1,0 +1,57 @@
+PHASE 1: PROJECT SKELETON
+
+ Create project folder
+
+ Create main.go
+
+ Print app title
+
+ Add infinite menu loop
+
+ Take menu input
+
+🔹 PHASE 2: DATA MODELING
+
+ Create Student struct
+
+ Create slice to store students
+
+ Create auto-increment ID variable
+
+🔹 PHASE 3: MENU LOGIC
+
+ Define menu constants
+
+ Implement switch-case
+
+ Call correct functions from menu
+
+🔹 PHASE 4: CORE FEATURES
+
+ Add student function
+
+ View students function
+
+ Search student using map
+
+ Update student using pointer
+
+ Delete student from slice
+
+🔹 PHASE 5: POLISHING
+
+ Handle empty list cases
+
+ Show clean messages
+
+ Test all menu paths
+
+ Remove unused code
+
+8️⃣ SUCCESS CRITERIA (YOU ARE DONE WHEN…)
+
+✔ No compile errors
+✔ All menu options work
+✔ Data updates correctly
+✔ You understand every line of code
+✔ You can explain the project verbally
