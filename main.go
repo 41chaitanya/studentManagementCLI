@@ -6,6 +6,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"studentManagementCLI/service"
 )
 
 func main() {
@@ -29,6 +30,14 @@ func main() {
 		}
 		if choice ==0{
 			continue
+		}
+		if choice ==6{
+			fmt.Println("Exiting the application. Goodbye!")
+			break
+		}
+		if choice ==5{
+			fmt.Println("Student Management System")
+			fmt.Println("tocatl no of students now ",len(service.Student))
 		}
 		fmt.Printf("nice you have entered %v \n\n",choice)
 	}
