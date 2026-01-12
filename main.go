@@ -8,7 +8,14 @@ import (
 	"strings"
 	"studentManagementCLI/service"
 )
-
+const (
+	ADD_STUDENT    = 1
+	VIEW_STUDENTS  = 2
+	SEARCH_STUDENT = 3
+	UPDATE_STUDENT = 4
+	DELETE_STUDENT = 5
+	EXIT           = 6
+)
 func main() {
 	fmt.Println("+====================================+")
 	fmt.Println("|    Student Management CLI Tool     |")
@@ -25,9 +32,6 @@ func main() {
 		fmt.Println("6. Exit")
 
 		choice :=getUserChoice()
-		if choice < 1 || choice > 6{
-			continue
-		}
 		if choice ==0{
 			continue
 		}
@@ -35,13 +39,29 @@ func main() {
 			fmt.Println("Exiting the application. Goodbye!")
 			break
 		}
-		if choice ==5{
-			fmt.Println("Student Management System")
-			fmt.Println("tocatl no of students now ",len(service.Student))
-		}
-		fmt.Printf("nice you have entered %v \n\n",choice)
+		choiceHandling(choice)
+		
 	}
 }
+
+	func choiceHandling(choice int){
+		switch choice {
+			case ADD_STUDENT:
+				service.AddStudents()
+			case VIEW_STUDENTS:
+				service.ViewStudents()
+			case SEARCH_STUDENT:
+				service.SearchStuent()
+			case UPDATE_STUDENT:
+				service.UpdateStudent()
+			case DELETE_STUDENT:
+				service.DeleteStudent()
+			default:
+				fmt.Println("Invalid choice. Please try again.")
+
+		}
+		
+	}
 	func getUserChoice() int {
 	
 		reader :=bufio.NewReader(os.Stdin)
