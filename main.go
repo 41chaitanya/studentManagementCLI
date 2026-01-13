@@ -22,6 +22,8 @@ func main() {
 	fmt.Println("+====================================+")
 	fmt.Println("Welcome ! You are inside the app.")
 
+	service.LoadFromFile()
+
 	for {
 		fmt.Println("Menue ----- :)")
 		fmt.Println("1. Add Student")
@@ -36,6 +38,7 @@ func main() {
 			continue
 		}
 		if choice ==6{
+			service.SaveToFile()
 			fmt.Println("Exiting the application. Goodbye!")
 			break
 		}
